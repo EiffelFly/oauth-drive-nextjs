@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { signIn } from "next-auth/react";
 
 export default function Home() {
   return (
@@ -107,6 +110,14 @@ export default function Home() {
             Instantly deploy your Next.js site to a shareable URL with Vercel.
           </p>
         </a>
+
+        <button
+          onClick={() => {
+            signIn();
+          }}
+        >
+          Login
+        </button>
       </div>
     </main>
   );
